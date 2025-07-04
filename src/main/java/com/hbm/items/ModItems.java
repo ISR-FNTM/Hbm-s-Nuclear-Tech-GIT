@@ -1107,6 +1107,7 @@ public class ModItems {
 	public static Item bean_raw;
 	public static Item bean_roast;
 	public static Item powder_coffee;
+	public static Item powder_salt;
 	public static Item cmug_empty;
 	public static Item teacup;
 	public static Item teacup_empty;

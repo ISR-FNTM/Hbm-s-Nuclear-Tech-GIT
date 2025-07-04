@@ -149,7 +149,13 @@ public class ChemicalPlantRecipes extends GenericRecipes<GenericRecipe> {
 				.inputItems(new OreDictStack(COAL.dust(), 2), new OreDictStack(F.dust()))
 				.inputFluids(new FluidStack(Fluids.PETROLEUM, 500, GeneralConfig.enable528 ? 1 : 0))
 				.outputItems(new ItemStack(ModItems.ingot_polymer)));
-
+		this.register(new GenericRecipe("chem.salt").setup(200, 100)
+				.inputFluids(new FluidStack(Fluids.WATER, 1_000))
+				.outputItems(new ItemStack(ModItems.powder_salt)));
+		this.register(new GenericRecipe("chem.NaCl").setup(200, 100)
+				.inputItems(new ItemStack(ModItems.powder_salt, 2))
+				.outputItems(new ItemStack(ModItems.powder_sodium))
+				.outputFluids(new FluidStack(Fluids.CHLORINE, 500)));
 		this.register(new GenericRecipe("chem.bakelite").setup(100, 100)
 				.inputFluids(new FluidStack(Fluids.AROMATICS, 500, GeneralConfig.enable528 ? 1 : 0), new FluidStack(Fluids.PETROLEUM, 500, GeneralConfig.enable528 ? 1 : 0))
 				.outputItems(new ItemStack(ModItems.ingot_bakelite)));
